@@ -85,8 +85,8 @@ export class ClimbingEnemy extends Enemy {
     draw(context){
         super.draw(context);
         context.beginPath();
-        context.moveTo(0,0);
-        context.lineTo(this.x, 0);
+        context.moveTo(this.x + this.width/2,0);
+        context.lineTo(this.x + this.width/2, this.y) + 50;
         context.stroke();
     }
 }

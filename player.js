@@ -12,7 +12,7 @@ export class Player {
         this.image = document.getElementById('player');
         this.frameX = 0;
         this.frameY = 0;
-        this.maxFrame;
+        this.maxFrame = 5;
         this.fps = 20;
         this.frameInterval = 1000/this.fps;
         this.frameTimer = 0;
@@ -45,7 +45,6 @@ export class Player {
         }
     }
     draw(context){
-        // context.fillRect(this.x, this.y, this.width, this.height);
         context.drawImage(this.image, this.frameX * this.width, this.frameY * this.height, this.width, this.height, this.x, this.y, this.width, this.height);
     }
     onGround(){

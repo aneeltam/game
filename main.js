@@ -66,5 +66,5 @@ window.addEventListener('load', function(){
         game.draw(ctx);
         requestAnimationFrame(animate);
     }
-    animate();
+    animate(0);
 });
