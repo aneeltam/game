@@ -40,11 +40,11 @@ export class Running extends State {
     }
     enter(){
         this.game.player.frameX = 0;
-        this.game.player.maxFrame = 8;
+        this.game.player.maxFrame = 6;
         this.game.player.frameY = 3;
     }
     handleInput(input){
-        this.game.particles.push(new Dust(this.game, this.game.player.x, this.game.player.y));
+        this.game.particles.push(new Dust(this.game, this.game.player.x + this.game.player.width * 0.5, this.game.player.y));
         if (input.includes('ArrowDown')){
             this.game.player.setState(states.SITTING);
         } else if (input.includes('ArrowUp')){

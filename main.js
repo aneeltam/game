@@ -31,11 +31,11 @@ window.addEventListener('load', function(){
             this.player.currentState = this.player.states[0];
             this.player.currentState.enter();
         }
-        update(deltaTime){
+        update(deltaTime) {
             this.background.update();
             this.player.update(this.input.keys, deltaTime);
             // handleEnemies
-            if (this.enemyTimer > this.enemyInterval){
+            if (this.enemyTimer > this.enemyInterval) {
                 this.addEnemy();
                 this.enemyTimer = 0;
             } else {
@@ -50,7 +50,9 @@ window.addEventListener('load', function(){
                 particle.update();
                 if (particle.markedForDeletion) this.particles.splice(index, 1);
             });
+            console.log(this.particles);
         }
+        
         draw(context){
             this.background.draw(context);
             this.player.draw(context);
