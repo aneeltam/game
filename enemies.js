@@ -18,7 +18,6 @@ class Enemy {
         } else {
             this.frameTimer += deltaTime;
         }
-        // check if off screen
         if (this.x + this.width < 0) this.markedForDeletion = true;
     }
     draw(context){

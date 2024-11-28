@@ -32,8 +32,8 @@ window.addEventListener('load', function(){
             this.score = 0;
             this.winningScore = 35;
             this.fontColor = 'black';
-            this.time = 30000;  // Start time at 30 seconds (30000 milliseconds)
-            this.maxTime = 30000;  // Total time is 30 seconds
+            this.time = 30000;
+            this.maxTime = 30000;
             this.gameOver = false;
             this.lives = 5;
             this.player.currentState = this.player.states[0];
